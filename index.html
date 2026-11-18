@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Solar | Ahorro energético de calidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-bar" id="topBar">
+        <span>Soluciones fotovoltaicas residenciales e industriales en Monterrey y la región norte | <a href="#contacto">Contáctanos →</a></span>
+        <button class="top-bar-close" onclick="closeTopBar()">&times;</button>
+    </div>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="North Solar Mty - 1.png" alt="North Solar Logo" class="logo-img">
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#soluciones" onclick="closeMenu()">Soluciones</a></li>
+                <li><a href="#proyectos" onclick="closeMenu()">Proyectos</a></li>
+                <li><a href="#faq" onclick="closeMenu()">Preguntas Frecuentes</a></li>
+                <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="tel:8126219962" class="header-phone">📞 812 621 9962</a>
+                <button class="btn-primary" onclick="closeMenu(); openModal('Estudio de Factibilidad')">Solicitar Estudio</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero reveal">
+        <div class="hero-text">
+            <h1>Ahorro energético de calidad para hogares e industria</h1>
+            <p>Diseñamos e instalamos sistemas fotovoltaicos de alta precisión adaptados a tus necesidades de consumo. Máxima eficiencia y retorno garantizado con soporte de ingeniería especializada.</p>
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="openModal('Cotización Residencial / C&I')">Solicitar Análisis Gratuito</button>
+                <a href="#soluciones" class="btn-secondary">Conocer Soluciones</a>
+            </div>
+            <div class="hero-certifications">
+                <strong>Ingeniería y Cumplimiento:</strong> Normativas vigentes CFE | Componentes Tier 1 | Estándares de Calidad Internacional
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="image_0ca3de.jpg" alt="Instalación Solar Real North Solar">
+        </div>
+    </section>
+
+    <section class="services-section" id="soluciones">
+        <h2 class="section-title reveal">Nuestras Soluciones Fotovoltaicas</h2>
+        
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <h3>Residencial</h3>
+                <p>Reduce drásticamente tu recibo de luz en el hogar con sistemas solares diseñados a la medida de tu consumo familiar, asegurando estética, durabilidad y máxima generación.</p>
+                <ul class="tab-features">
+                    <li>✓ Inversores y paneles de alta eficiencia</li>
+                    <li>✓ Trámites e interconexión ante CFE incluidos</li>
+                    <li>✓ Monitoreo en tiempo real desde tu celular</li>
+                </ul>
+                <button class="btn-secondary" onclick="openModal('Sistema Residencial')">Cotizar Residencial</button>
+            </div>
+
+            <div class="service-card reveal">
+                <h3>Comercial e Industrial (C&I)</h3>
+                <p>Optimiza los costos operativos de tu empresa o nave industrial mediante infraestructura solar robusta para mitigar tarifas de alta demanda eléctrica.</p>
+                <ul class="tab-features">
+                    <li>✓ Ingeniería de detalle y estudios de carga</li>
+                    <li>✓ Estructuras especializadas para techos metálicos o losa</li>
+                    <li>✓ Retorno de inversión acelerado para empresas</li>
+                </ul>
+                <button class="btn-secondary" onclick="openModal('Sistema Comercial e Industrial (C&I)')">Cotizar C&I</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section" id="proyectos">
+        <h2 class="section-title reveal">Ingeniería y Calidad en Cada Proyecto</h2>
+        <div class="cards-grid">
+            
+            <div class="card reveal">
+                <div class="card-body">
+                    <div class="card-title">1. Levantamiento y Análisis</div>
+                    <div class="card-text">Estudiamos tus patrones de consumo a partir de tu recibo CFE y evaluamos el área disponible para optimizar el rendimiento del sistema.</div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-body">
+                    <div class="card-title">2. Ingeniería y Diseño</div>
+                    <div class="card-text">Seleccionamos equipos de última tecnología garantizando la seguridad estructural y eléctrica bajo normativas vigentes.</div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-body">
+                    <div class="card-title">3. Instalación e Interconexión</div>
+                    <div class="card-text">Ejecución profesional con personal certificado y gestión completa del trámite de medidor bidireccional ante CFE.</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <h2 class="section-title reveal">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+
+            <div class="faq-item reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Cómo funciona el ahorro en mi recibo de luz con CFE?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nosotros nos encargamos de tramitar ante CFE el cambio a un medidor especial llamado bidireccional. Durante el día, toda la energía extra que producen tus paneles y no usas en ese momento se guarda como saldo a favor, el cual cubre la luz que consumes en la noche o cuando no hay sol.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Qué pasa si está nublado o si se va la luz en mi colonia?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Los paneles funcionan con la claridad del día, no solo con el calor, así que en días nublados siguen generando energía (aunque un poco menos). Por seguridad, si hay un apagón en la calle, el sistema se apaga automáticamente para proteger a los técnicos de CFE que reparan la línea, a menos que agregues baterías de respaldo a tu instalación.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Cuánto duran los paneles y qué mantenimiento necesitan?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Los paneles tienen una vida útil de más de 25 años. Como no tienen piezas que se desgasten, su cuidado es muy sencillo: basta con limpiarles el polvo cada 4 o 6 meses para que reciban bien el sol y hacer una revisión general una vez al año.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Por qué me piden mi recibo de CFE para darme una cotización?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cada casa o negocio gasta una cantidad distinta de luz y paga tarifas diferentes. Revisar tu recibo nos permite calcular el número exacto de paneles que necesitas para bajar tu pago al mínimo, evitando que gastes de más en equipos que no ocupas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Las empresas tienen algún beneficio fiscal al poner paneles solares?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sí. En México, la ley permite que las empresas y negocios deduzcan al 100% la inversión de su sistema solar en su declaración de impuestos del mismo año en que lo compran, lo que hace que recuperen su dinero mucho más rápido.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+        <div class="footer-grid reveal">
+            <div class="footer-brand">
+                <div class="logo-container" style="background: #fff; display: inline-block; padding: 5px; border-radius: 4px; height: 45px;">
+                    <img src="North Solar Mty - 1.png" alt="North Solar Logo" style="height: 100%; width: auto;">
+                </div>
+                <p>Ahorro energético de calidad.<br>Sistemas fotovoltaicos residenciales e industriales.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Soluciones</h4>
+                <ul>
+                    <li><a href="#soluciones">Residencial</a></li>
+                    <li><a href="#soluciones">Comercial e Industrial (C&I)</a></li>
+                    <li><a href="#proyectos">Estudio de Factibilidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto Directo</h4>
+                <ul>
+                    <li><a href="tel:8126219962">Tel: 812 621 9962</a></li>
+                    <li><a href="#">Monterrey, N.L. y Zona Metropolitana</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Atención Inmediata</h4>
+                <button class="btn-primary" onclick="openModal('Contacto Directo')">Solicitar Asesoría</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © North Solar 2026 | Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/528126219962?text=Hola,%20me%20interesa%20solicitar%20información%20y%20cotización%20para%20un%20sistema%20solar." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.6 2.137 8.038l-2.275 8.313 8.513-2.238c2.313 1.263 4.963 1.913 7.625 1.913 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.338c-2.438 0-4.825-0.663-6.913-1.925l-0.5-0.3-5.188 1.363 1.388-5.05-0.325-0.513c-1.375-2.175-2.1-4.725-2.1-7.325 0-7.363 5.988-13.35 13.35-13.35s13.35 5.988 13.35 13.35c0 7.363-5.988 13.35-13.35 13.35zM22.913 19.363c-0.325-0.163-1.925-0.95-2.225-1.063s-0.525-0.163-0.75 0.163c-0.225 0.325-0.875 1.063-1.075 1.288s-0.4 0.25-0.725 0.088c-0.325-0.163-1.375-0.5-2.625-1.625-0.975-0.875-1.625-1.95-1.813-2.275s-0.025-0.5 0.15-0.663c0.15-0.15 0.325-0.4 0.5-0.6 0.163-0.2 0.225-0.325 0.35-0.55s0.063-0.425-0.038-0.6c-0.1-0.163-0.75-1.8-1.025-2.463s-0.538-0.575-0.738-0.587c-0.188-0.013-0.4-0.013-0.613-0.013s-0.55 0.075-0.838 0.375c-0.288 0.3-1.1 1.075-1.1 2.625s1.125 3.05 1.275 3.263c0.163 0.225 2.213 3.375 5.363 4.738 0.75 0.325 1.338 0.525 1.788 0.675 0.75 0.238 1.438 0.2 1.975 0.125 0.6-0.088 1.925-0.788 2.2-1.55s0.275-1.413 0.188-1.55c-0.075-0.138-0.275-0.213-0.6-0.375z"/></svg>
+    </a>
+
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle">Estudio de Factibilidad Solar</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Sube tu recibo de CFE y recibe una propuesta técnica y de ahorro personalizada.</p>
+            
+            <form id="quoteForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fullName">Nombre o Empresa *</label>
+                    <input type="text" id="fullName" class="form-input" placeholder="Ej. Juan Pérez / Industrial del Norte" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="corporateEmail">Correo Electrónico *</label>
+                    <input type="email" id="corporateEmail" class="form-input" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Número Telefónico *</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="81 2621 9962" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cfeBill">Adjuntar Recibo de CFE (Formato PDF) *</label>
+                    <input type="file" id="cfeBill" class="form-input" accept=".pdf" required style="padding: 6px;">
+                    <small style="color: var(--text-muted); font-size: 0.75rem;">Esto nos ayuda a calcular con precisión tu dimensionamiento ideal.</small>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; margin-top: 10px;">Enviar para Análisis →</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('menuToggle');
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('menuToggle');
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('open');
+        }
+
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const isOpen = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            if (!isOpen) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        function openModal(serviceName) {
+            document.getElementById('leadModal').classList.add('active');
+            if (serviceName) {
+                document.getElementById('modalTitle').innerText = 'Solicitar Cotización: ' + serviceName;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('leadModal').classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('leadModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function closeTopBar() {
+            document.getElementById('topBar').style.display = 'none';
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('¡Información recibida con éxito! Nos pondremos en contacto contigo a la brevedad al número 812 621 9962.');
+            closeModal();
+            document.getElementById('quoteForm').reset();
+        }
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(element => {
+            revealObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
